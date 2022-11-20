@@ -2,6 +2,10 @@ import React from 'react';
 import { useTheme } from '@mui/material/styles';
 
 export function LogoLarge({ width = '45px', height = '70px' }) {
+  const theme = useTheme();
+  const orange = theme.palette.primary.main;
+  const grey = theme.palette.text.primary;
+
   return (
     <svg
       width="100%"
@@ -24,13 +28,13 @@ export function LogoLarge({ width = '45px', height = '70px' }) {
               <g transform="matrix(1.01692,-1.01611e-16,-1.52147e-16,1.54172,2.88098,-15.7663)">
                 <path
                   d="M51.98,21.786C51.98,19.683 49.392,17.976 46.205,17.976L13.504,17.976C10.317,17.976 7.729,19.683 7.729,21.786C7.729,23.888 10.317,25.595 13.504,25.595L46.205,25.595C49.392,25.595 51.98,23.888 51.98,21.786Z"
-                  style={{ fill: 'rgb(245,124,0);' }}
+                  style={{ fill: orange }}
                 />
               </g>
               <g transform="matrix(3.52304e-16,1.01692,-1.54172,-6.82331e-17,83.4551,4.08861)">
                 <path
                   d="M51.98,21.786C51.98,19.683 49.392,17.976 46.205,17.976L13.504,17.976C10.317,17.976 7.729,19.683 7.729,21.786C7.729,23.888 10.317,25.595 13.504,25.595L46.205,25.595C49.392,25.595 51.98,23.888 51.98,21.786Z"
-                  style={{ fill: 'rgb(245,124,0);' }}
+                  style={{ fill: orange }}
                 />
               </g>
             </g>
@@ -38,13 +42,13 @@ export function LogoLarge({ width = '45px', height = '70px' }) {
               <g transform="matrix(-1.01692,-1.79573e-17,-5.19668e-16,-1.54172,60.9002,94.3491)">
                 <path
                   d="M51.98,21.786C51.98,19.683 49.392,17.976 46.205,17.976L13.504,17.976C10.317,17.976 7.729,19.683 7.729,21.786C7.729,23.888 10.317,25.595 13.504,25.595L46.205,25.595C49.392,25.595 51.98,23.888 51.98,21.786Z"
-                  style={{ fill: 'rgb(245,124,0);' }}
+                  style={{ fill: orange }}
                 />
               </g>
               <g transform="matrix(1.33261e-16,-1.01692,1.54172,-1.87356e-16,-19.6739,74.4941)">
                 <path
                   d="M51.98,21.771C51.98,19.677 49.402,17.976 46.227,17.976L13.482,17.976C10.307,17.976 7.729,19.677 7.729,21.771L7.729,21.8C7.729,23.894 10.307,25.595 13.482,25.595L46.227,25.595C49.402,25.595 51.98,23.894 51.98,21.8L51.98,21.771Z"
-                  style={{ fill: 'rgb(245,124,0);' }}
+                  style={{ fill: orange }}
                 />
               </g>
             </g>
@@ -70,7 +74,7 @@ export function LogoLarge({ width = '45px', height = '70px' }) {
                 fontWeight: 600,
                 fontFamily: "'SignikaNegative-Regular', 'Signika Negative'",
                 fontSize: '12px',
-                fill: '#2d3748',
+                fill: grey,
               }}
             >
               DR
@@ -82,7 +86,7 @@ export function LogoLarge({ width = '45px', height = '70px' }) {
                 fontWeight: 600,
                 fontFamily: "'SignikaNegative-Regular', 'Signika Negative'",
                 fontSize: '12px',
-                fill: 'rgb(245,124,0)',
+                fill: orange,
               }}
             >
               .
@@ -94,7 +98,7 @@ export function LogoLarge({ width = '45px', height = '70px' }) {
                 fontWeight: 600,
                 fontFamily: "'SignikaNegative-Regular', 'Signika Negative'",
                 fontSize: '12px',
-                fill: '#2d3748',
+                fill: grey,
               }}
             >
               WINKLER
@@ -108,13 +112,12 @@ export function LogoLarge({ width = '45px', height = '70px' }) {
             x="85.763px"
             y="62.229px"
             style={{
-              // fontFamily: "'DINNextW1G-Light', 'DIN Next W1G', sans-serif",
               fontWeight: 300,
               fontSize: '16px',
-              fill: '#2d3748',
+              fill: grey,
             }}
           >
-            Information Technologies
+            Information Technology Consulting
           </text>
         </g>
       </g>

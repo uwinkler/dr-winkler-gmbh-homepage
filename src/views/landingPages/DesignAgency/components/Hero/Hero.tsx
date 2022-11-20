@@ -35,21 +35,19 @@ const Hero = () => {
                 fontWeight: 700,
               }}
             >
-              Digital applications
+              Experience you can trust on
               <br />
-              that{' '}
               <Typography
                 color={'primary'}
                 component={'span'}
                 variant={'inherit'}
-              >
-                inspires
-              </Typography>
+              ></Typography>
             </Typography>
           </Box>
           <Box marginBottom={3}>
             <Typography variant="h6" component="p" color="textSecondary">
-              We are an digital agency, specialising in bespoke{' '}
+              We are a team of highly experienced IT professionals, specialising
+              in{' '}
               <Typography
                 variant="h6"
                 color="primary"

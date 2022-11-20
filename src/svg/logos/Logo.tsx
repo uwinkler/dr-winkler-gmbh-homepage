@@ -1,7 +1,6 @@
 import React from 'react';
-import { useTheme } from '@mui/material/styles';
 
-const Logo = ({ width = '45px', height = '70px' }) => {
+const Logo = () => {
   return (
     <svg
       width="100%"

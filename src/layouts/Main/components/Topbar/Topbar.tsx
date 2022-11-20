@@ -1,9 +1,6 @@
-import MenuIcon from '@mui/icons-material/Menu';
 import Box from '@mui/material/Box';
-import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import Link from '@mui/material/Link';
-import Logo from 'src/svg/logos/Logo';
 import { LogoLarge } from 'src/svg/logos/LogoLarge';
 
 type Callback = () => void;
