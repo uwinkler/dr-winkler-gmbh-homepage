@@ -5,8 +5,9 @@
   "version": "2.0.0",
   "private": true,
   "scripts": {
-    "start": "react-scripts start",
-    "build": "cross-env GENERATE_SOURCEMAP=false react-scripts build",
+    "dev": "next dev",
+    "start": "next start",
+    "build": "next build",
     "prettier:fix": "prettier './src/**/*.js' --write",
     "eslint:fix": "eslint ./src --fix",
     "clear-all": "rimraf ./build ./node_modules"
@@ -33,19 +34,20 @@
     "@emotion/styled": "^11.6.0",
     "@mui/icons-material": "^5.2.4",
     "@mui/material": "^5.2.4",
+    "@types/react": "^18.0.25",
     "aos": "^2.3.4",
     "clsx": "^1.0.4",
     "date-fns": "^2.19.0",
     "formik": "^2.2.6",
     "history": "^5.0.0",
+    "next": "latest",
     "prop-types": "^15.8.1",
-    "react": "^18.1.0",
+    "react": "latest",
     "react-countup": "^6.2.0",
-    "react-dom": "^18.1.0",
+    "react-dom": "latest",
     "react-image-lightbox": "^5.1.4",
     "react-lazy-load-image-component": "^1.5.4",
     "react-router-dom": "^6.3.0",
-    "react-scripts": "5.0.1",
     "react-slick": "^0.29.0",
     "react-syntax-highlighter": "^15.5.0",
     "react-visibility-sensor": "^5.1.1",
@@ -54,6 +56,7 @@
     "yup": "^0.32.11"
   },
   "devDependencies": {
+    "@types/node": "18.11.9",
     "@typescript-eslint/eslint-plugin": "^5.23.0",
     "@typescript-eslint/parser": "^5.23.0",
     "babel-eslint": "^10.1.0",
@@ -71,6 +74,6 @@
     "prettier-eslint": "^15.0.0",
     "prettier-eslint-cli": "^6.0.1",
     "rimraf": "^3.0.2",
-    "typescript": "^4.6.4"
+    "typescript": "^4.9.3"
   }
 }
