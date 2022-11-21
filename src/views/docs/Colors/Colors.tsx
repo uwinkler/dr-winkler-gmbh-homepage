@@ -12,17 +12,20 @@ import Grid from '@mui/material/Grid';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import Container from 'src/common/Container';
-import { light as lightGreen, dark as darkGreen } from 'theme/palette--green';
-import { light as lightBlue, dark as darkBlue } from 'theme/palette--blue';
+import {
+  light as lightGreen,
+  dark as darkGreen,
+} from 'src/theme/palette--green';
+import { light as lightBlue, dark as darkBlue } from 'src/theme/palette--blue';
 import {
   light as lightIndigo,
   dark as darkIndigo,
-} from 'theme/palette--indigo';
-import { light as lightPink, dark as darkPink } from 'theme/palette--pink';
+} from 'src/theme/palette--indigo';
+import { light as lightPink, dark as darkPink } from 'src/theme/palette--pink';
 import {
   light as lightOrange,
   dark as darkOrange,
-} from 'theme/palette--orange';
+} from 'src/theme/palette--orange';
 
 const Colors = ({ themeMode = 'light' }) => {
   const theme = useTheme();

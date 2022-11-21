@@ -42,10 +42,7 @@ const Map = ({ themeMode = 'light' }) => {
           minHeight={400}
           width="100%"
           height="100%"
-          frameBorder="0"
           title="map"
-          marginHeight="0"
-          marginWidth="0"
           scrolling="no"
           src="https://maps.google.com/maps?width=100%&height=100%&hl=en&q=Milan&ie=UTF8&t=&z=14&iwloc=B&output=embed"
           sx={{

@@ -2,8 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const LayoutFluid = ({
-  width = 94,
-  height = 94,
+  width = '94',
+  height = '94',
   fillColor = 'currentColor',
 }) => {
   return (

@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { useTheme } from '@mui/material/styles';
 
-const Innovation = ({ width = 112, height = 115 }) => {
+const Innovation = ({ width = '112', height = '115' }) => {
   const theme = useTheme();
   const colorPrimaryMain = theme.palette.primary.main;
   return (

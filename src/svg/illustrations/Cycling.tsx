@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { useTheme } from '@mui/material/styles';
 
-const Cycling = ({ width = 145, height = 118 }) => {
+const Cycling = ({ width = '145', height = '118' }) => {
   const theme = useTheme();
   const colorPrimaryMain = theme.palette.primary.main;
   return (

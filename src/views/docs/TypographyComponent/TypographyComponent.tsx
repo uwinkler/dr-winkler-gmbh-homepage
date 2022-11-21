@@ -125,7 +125,7 @@ const TypographyComponent = () => {
               <Grid item xs={12} key={item}>
                 <Box component={Card} boxShadow={4} borderRadius={4}>
                   <CardContent>
-                    <Typography variant={item}>
+                    <Typography variant={item as any}>
                       {item}. Lorem ipsum dolor sit amet, consectetur
                       adipisicing elit. Quos blanditiis tenetur
                     </Typography>

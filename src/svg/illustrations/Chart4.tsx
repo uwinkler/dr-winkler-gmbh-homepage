@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { useTheme } from '@mui/material/styles';
 
-const Chart4 = ({ width = 274, height = 208 }) => {
+const Chart4 = ({ width = '274', height = '208' }) => {
   const theme = useTheme();
   const colorPaper = theme.palette.background.paper;
   const colorPrimaryMain = theme.palette.primary.main;

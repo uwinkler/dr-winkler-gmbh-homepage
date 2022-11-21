@@ -53,7 +53,6 @@ const Faq = () => {
             component={Accordion}
             key={i}
             padding={1}
-            marginBottom={i === item.length - 1 ? 0 : 2}
             borderRadius={`${theme.spacing(1)} !important`}
             sx={{
               '&::before': {

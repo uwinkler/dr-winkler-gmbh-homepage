@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { useTheme } from '@mui/material/styles';
 
-const TeamWorking = ({ width = 164, height = 101 }) => {
+const TeamWorking = ({ width = '164', height = '101' }) => {
   const theme = useTheme();
   const colorPrimaryMain = theme.palette.primary.main;
   return (

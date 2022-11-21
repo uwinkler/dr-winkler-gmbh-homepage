@@ -19,13 +19,12 @@ const Footer = () => (
         <Box
           display={'flex'}
           component="a"
-          underline="none"
           href="/"
           title="webbee"
           height={24}
           width={35}
         >
-          <Logo height={'100%'} width={'100%'} />
+          <Logo />
         </Box>
         <Box display="flex" flexWrap={'wrap'} alignItems={'center'}>
           <Box marginTop={1} marginRight={2}>

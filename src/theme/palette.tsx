@@ -4,6 +4,15 @@ import { light as lightIndigo, dark as darkIndigo } from './palette--indigo';
 import { light as lightPink, dark as darkPink } from './palette--pink';
 import { light as lightOrange, dark as darkOrange } from './palette--orange';
 
+declare module '@mui/material/styles' {
+  interface Palette {
+    alternate: Palette['primary'];
+  }
+  interface PaletteOptions {
+    alternate: PaletteOptions['primary'];
+  }
+}
+
 const palette = (themeMode = 'light', paletteType = 'green') => {
   if (paletteType === 'blue') {
     return themeMode === 'dark' ? darkBlue : lightBlue;

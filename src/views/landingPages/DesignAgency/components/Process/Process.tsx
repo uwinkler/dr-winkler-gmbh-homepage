@@ -10,6 +10,8 @@ import Typography from '@mui/material/Typography';
 import Avatar from '@mui/material/Avatar';
 import Grid from '@mui/material/Grid';
 import { colors } from '@mui/material';
+import Image from 'next/image';
+import { grey } from '@mui/material/colors';
 
 const Process = ({ themeMode = 'light' }) => {
   const theme = useTheme();
@@ -27,7 +29,7 @@ const Process = ({ themeMode = 'light' }) => {
         gutterBottom
         color={'secondary'}
       >
-        Our process
+        Technologies
       </Typography>
       <Box
         component={Typography}
@@ -36,7 +38,7 @@ const Process = ({ themeMode = 'light' }) => {
         gutterBottom
         data-aos={isMd ? 'fade-right' : 'fade-up'}
       >
-        A simple, yet powerful process
+        Technologies we love
       </Box>
       <Typography
         variant={'h6'}
@@ -44,9 +46,9 @@ const Process = ({ themeMode = 'light' }) => {
         color={'textSecondary'}
         data-aos={isMd ? 'fade-right' : 'fade-up'}
       >
-        We are a small agency with a talented team of designers & developers.
-        Unlike huge agencies, we will treat your project as ours, and will walk
-        you through our process by hand.
+        We are a specialized agency with a talented team of developers. Here are
+        some of the cutting edge technologies we love and use to bring your
+        ideas to live.
       </Typography>
     </Box>
   );
@@ -58,7 +60,7 @@ const Process = ({ themeMode = 'light' }) => {
       speed: 500,
       slidesToShow: 1,
       slidesToScroll: 1,
-      arrows: false,
+      arrows: true,
     };
 
     return (
@@ -66,71 +68,73 @@ const Process = ({ themeMode = 'light' }) => {
         <Slider {...sliderOpts}>
           {[
             {
-              title: 'Idea',
+              title: 'React',
               subtitle:
-                'We meet with your team to know more about your project idea and goals. After that, our team will work together to create an action plan and proposal for your project.',
+                'We are using React as our primary frontend and mobile framework. We love the component based approach and the huge ecosystem of frameworks, libraries and tools.',
               icon: (
-                <svg
-                  width={48}
-                  height={48}
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"
-                  />
-                </svg>
+                <Image
+                  src="/assets/logos/react.svg"
+                  alt="react"
+                  width={80}
+                  height={80}
+                />
               ),
               color: colors.amber,
             },
             {
-              title: 'Design',
+              title: 'Typescript',
               subtitle:
-                'We start by designing a mockup or prototype of your website, and present it to you. Once with the initial mockup, we start the revision process to perfect it.',
+                'Typescript is the programming language of our choice. It is a strongly-typed language and that helps us to write more robust code - in the frontend and in the backend.',
               icon: (
-                <svg
-                  width={48}
-                  height={48}
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"
-                  />
-                </svg>
+                <Image
+                  src="/assets/logos/ts.svg"
+                  alt="react"
+                  width={80}
+                  height={80}
+                />
+              ),
+              color: colors.amber,
+            },
+            {
+              title: 'Node',
+              subtitle:
+                'We are using Node as our primary backend framework. Node is a great platform for building fast and web applications that can be deployed in the cloud.',
+              icon: (
+                <Image
+                  src="/assets/logos/node.svg"
+                  alt="react"
+                  width={80}
+                  height={80}
+                />
               ),
               color: colors.purple,
             },
             {
-              title: 'Development',
+              title: 'MongoDB',
               subtitle:
-                'We develop your website using the best practices and standards, so you have a perfectly responsive, lightning fast, SEO-friendly, and super scalable website.',
+                'MongoDB is our primary database. We love the flexibility and the document based approach, which makes it easy to develop modern applications.',
               icon: (
-                <svg
-                  width={48}
-                  height={48}
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
-                  />
-                </svg>
+                <Image
+                  src="/assets/logos/mongodb.svg"
+                  alt="MongoDb"
+                  width={80}
+                  height={80}
+                />
+              ),
+
+              color: colors.purple,
+            },
+            {
+              title: 'Cloud',
+              subtitle:
+                'We deploy your wep-app using the best cloud practices and standards, so you have a perfectly responsive, lightning fast, easy to maintain, and super scalable application.',
+              icon: (
+                <Image
+                  src="/assets/logos/aws.svg"
+                  alt="aws"
+                  width={80}
+                  height={80}
+                />
               ),
               color: colors.green,
             },
@@ -154,7 +158,10 @@ const Process = ({ themeMode = 'light' }) => {
                     height={84}
                     marginBottom={2}
                     bgcolor={
-                      themeMode === 'light' ? item.color[50] : item.color[200]
+                      // bgcolor={
+                      themeMode === 'light'
+                        ? theme.palette.grey[50]
+                        : theme.palette.grey[200]
                     }
                     borderRadius={5}
                   >

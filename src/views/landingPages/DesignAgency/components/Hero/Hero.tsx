@@ -1,10 +1,8 @@
-import React from 'react';
-import { useTheme } from '@mui/material/styles';
-import useMediaQuery from '@mui/material/useMediaQuery';
 import Box from '@mui/material/Box';
-import Button from '@mui/material/Button';
-import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Grid';
+import { useTheme } from '@mui/material/styles';
+import Typography from '@mui/material/Typography';
+import useMediaQuery from '@mui/material/useMediaQuery';
 import InnovationIllustration from 'src/svg/illustrations/Innovation';
 
 const Hero = () => {
@@ -63,7 +61,7 @@ const Hero = () => {
                 component="span"
                 fontWeight={600}
               >
-                cloud
+                mobile
               </Typography>{' '}
               and{' '}
               <Typography
@@ -72,7 +70,7 @@ const Hero = () => {
                 component="span"
                 fontWeight={600}
               >
-                mobile
+                cloud
               </Typography>{' '}
               applications.
             </Typography>
@@ -88,7 +86,7 @@ const Hero = () => {
           alignItems={'center'}
         >
           <Box height={'100%'} width={'100%'} maxHeight={500}>
-            <InnovationIllustration width={'100%'} height={'100%'} />
+            <InnovationIllustration height="100%" width="100%" />
           </Box>
         </Box>
       </Grid>

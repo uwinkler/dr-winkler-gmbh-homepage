@@ -27,9 +27,9 @@ const WhyUs = () => {
           align={'center'}
           data-aos={'fade-up'}
         >
-          We take you by hand on each
+          We can support you on each
           <br />
-          step of the process
+          step of the product live cycle
         </Box>
         <Typography
           variant={'h6'}
@@ -40,11 +40,11 @@ const WhyUs = () => {
         >
           As experts in both design & development,
           <br />
-          we help you go through the complete process.
+          we help you and your team go through the complete process.
           <br />
-          From your new website idea, to design, development, launch and scale!
+          From your new app idea, to design, development, launch and scale!
         </Typography>
-        <Box
+        {/* <Box
           marginTop={3}
           display={'flex'}
           justifyContent={'center'}
@@ -53,7 +53,7 @@ const WhyUs = () => {
           <Button variant={'contained'} color={'primary'} size={'large'}>
             Contact us
           </Button>
-        </Box>
+        </Box> */}
       </Box>
       <Box display={'flex'} justifyContent={'center'} alignItems={'center'}>
         <Box height={'100%'} width={'100%'} maxWidth={600} data-aos={'fade-up'}>

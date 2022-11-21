@@ -111,9 +111,9 @@ const Schedules = () => {
               </Box>
               <CardContent>
                 <Box
-                  display={'flex'}
-                  justifyContent={'space-between'}
-                  align={'center'}
+                // display={'flex'}
+                // justifyContent={'space-between'}
+                // align={'center'}
                 >
                   <Box
                     paddingX={1}

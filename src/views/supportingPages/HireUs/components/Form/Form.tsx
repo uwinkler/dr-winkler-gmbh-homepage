@@ -11,19 +11,19 @@ import MenuItem from '@mui/material/MenuItem';
 
 const validationSchema = yup.object({
   firstName: yup
-    .string('Enter your first name')
+    .string()
     .trim()
     .min(2, 'Please enter a valid name')
     .max(50, 'Please enter a valid name')
     .required('Please specify your first name'),
   lastName: yup
-    .string('Enter your last name')
+    .string()
     .trim()
     .min(2, 'Please enter a valid name')
     .max(50, 'Please enter a valid name')
     .required('Please specify your last name'),
   email: yup
-    .string('Enter your email')
+    .string()
     .trim()
     .email('Please enter a valid email address')
     .required('Email is required.'),
@@ -84,7 +84,6 @@ const Form = () => {
               error={
                 formik.touched.firstName && Boolean(formik.errors.firstName)
               }
-              helperText={formik.touched.firstName && formik.errors.firstName}
             />
           </Grid>
           <Grid item xs={12} sm={6}>
@@ -99,7 +98,6 @@ const Form = () => {
               value={formik.values.lastName}
               onChange={formik.handleChange}
               error={formik.touched.lastName && Boolean(formik.errors.lastName)}
-              helperText={formik.touched.lastName && formik.errors.lastName}
             />
           </Grid>
           <Grid item xs={12} sm={6}>
@@ -114,7 +112,6 @@ const Form = () => {
               value={formik.values.email}
               onChange={formik.handleChange}
               error={formik.touched.email && Boolean(formik.errors.email)}
-              helperText={formik.touched.email && formik.errors.email}
             />
           </Grid>
           <Grid item xs={12} sm={6}>
@@ -129,7 +126,6 @@ const Form = () => {
               value={formik.values.phone}
               onChange={formik.handleChange}
               error={formik.touched.phone && Boolean(formik.errors.phone)}
-              helperText={formik.touched.phone && formik.errors.phone}
             />
           </Grid>
           <Grid item xs={12}>
@@ -145,7 +141,6 @@ const Form = () => {
               value={formik.values.budget}
               onChange={formik.handleChange}
               error={formik.touched.budget && Boolean(formik.errors.budget)}
-              helperText={formik.touched.budget && formik.errors.budget}
             >
               {[
                 '< $20.000',
@@ -173,7 +168,6 @@ const Form = () => {
               value={formik.values.message}
               onChange={formik.handleChange}
               error={formik.touched.message && Boolean(formik.errors.message)}
-              helperText={formik.touched.message && formik.errors.message}
             />
           </Grid>
           <Grid

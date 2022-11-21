@@ -11,7 +11,7 @@ import Link from '@mui/material/Link';
 
 const validationSchema = yup.object({
   email: yup
-    .string('Enter your email')
+    .string()
     .trim()
     .email('Please enter a valid email address')
     .required('Email is required.'),
@@ -76,7 +76,6 @@ const Form = () => {
               value={formik.values.email}
               onChange={formik.handleChange}
               error={formik.touched.email && Boolean(formik.errors.email)}
-              helperText={formik.touched.email && formik.errors.email}
             />
           </Grid>
           <Grid item xs={12}>
@@ -113,7 +112,6 @@ const Form = () => {
               value={formik.values.password}
               onChange={formik.handleChange}
               error={formik.touched.password && Boolean(formik.errors.password)}
-              helperText={formik.touched.password && formik.errors.password}
             />
           </Grid>
           <Grid item container xs={12}>

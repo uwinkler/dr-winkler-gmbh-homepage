@@ -1,17 +1,17 @@
 /* eslint-disable react/jsx-key */
 /* eslint-disable quotes */
 /* eslint-disable react/no-unescaped-entities */
-import React from 'react';
-import SyntaxHighlighter from 'react-syntax-highlighter';
-import { vs2015 } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+import { Rocket } from '@mui/icons-material';
 import { colors } from '@mui/material';
-import { useTheme } from '@mui/material/styles';
-import Link from '@mui/material/Link';
 import Box from '@mui/material/Box';
-import Typography from '@mui/material/Typography';
-import Grid from '@mui/material/Grid';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
+import Grid from '@mui/material/Grid';
+import Link from '@mui/material/Link';
+import { useTheme } from '@mui/material/styles';
+import Typography from '@mui/material/Typography';
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { vs2015 } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 import Container from 'src/common/Container';
 import Chart1 from 'src/svg/illustrations/Chart1';
 import Chart2 from 'src/svg/illustrations/Chart2';
@@ -25,10 +25,9 @@ import Cycling from 'src/svg/illustrations/Cycling';
 import Designer from 'src/svg/illustrations/Designer';
 import Globe from 'src/svg/illustrations/Globe';
 import Innovation from 'src/svg/illustrations/Innovation';
-import NotFound from 'src/svg/illustrations/NotFound';
 import TeamWorking from 'src/svg/illustrations/TeamWorking';
-import Travel from 'src/svg/illustrations/Travel';
-import Rocket from 'src/svg/illustrations/Rocket';
+import { Travel } from 'src/views/landingPages';
+import { NotFound } from 'src/views/supportingPages';
 
 const Illustrations = () => {
   const theme = useTheme();
@@ -91,22 +90,22 @@ import CreditCardsIllustration from 'src/svg/illustrations/CreditCards';
       <Container paddingTop={'0 !important'}>
         <Grid container spacing={4}>
           {[
-            <City width={'100%'} height={'100%'} />,
-            <Rocket width={'100%'} height={'100%'} />,
-            <CloudHosting width={'100%'} height={'100%'} />,
-            <CreditCards width={'100%'} height={'100%'} />,
-            <CreditCards2 width={'100%'} height={'100%'} />,
-            <Cycling width={'100%'} height={'100%'} />,
-            <Designer width={'100%'} height={'100%'} />,
-            <Globe width={'100%'} height={'100%'} />,
-            <Innovation width={'100%'} height={'100%'} />,
-            <NotFound width={'100%'} height={'100%'} />,
-            <TeamWorking width={'100%'} height={'100%'} />,
-            <Travel width={'100%'} height={'100%'} />,
-            <Chart1 width={'100%'} height={'100%'} />,
-            <Chart2 width={'100%'} height={'100%'} />,
-            <Chart3 width={'100%'} height={'100%'} />,
-            <Chart4 width={'100%'} height={'100%'} />,
+            <City />,
+            <Rocket />,
+            <CloudHosting />,
+            <CreditCards />,
+            <CreditCards2 />,
+            <Cycling />,
+            <Designer />,
+            <Globe />,
+            <Innovation />,
+            <NotFound />,
+            <TeamWorking />,
+            <Travel />,
+            <Chart1 />,
+            <Chart2 />,
+            <Chart3 />,
+            <Chart4 />,
           ].map((item, i) => (
             <Grid
               item

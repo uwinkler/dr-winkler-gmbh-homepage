@@ -41,7 +41,7 @@ const Travel = () => {
           zIndex={1}
           data-aos={'fade-down'}
         >
-          <CityIllustration width={'100%'} height={isLg ? 450 : '100%'} />
+          <CityIllustration width={'100%'} height={isLg ? '450' : '100%'} />
         </Box>
       </Box>
       <Container>

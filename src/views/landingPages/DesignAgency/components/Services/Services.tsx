@@ -42,11 +42,11 @@ const Services = ({ themeMode = 'light' }) => {
 
   const sliderOpts = {
     dots: true,
-    infinite: true,
+    infinite: false,
     speed: 500,
     slidesToShow,
-    slidesToScroll: 1,
-    arrows: false,
+    // slidesToScroll: 1,
+    arrows: true,
   };
 
   return (
@@ -72,7 +72,8 @@ const Services = ({ themeMode = 'light' }) => {
             High-impact design & development services
           </Box>
           <Typography variant={'h6'} component={'p'} color={'textSecondary'}>
-            We take you by hand on each step of the process
+            Centered around modern web technologies, we provide a wide range of
+            services to help you to bring your ideas to life.
           </Typography>
         </Box>
       </Container>
@@ -80,9 +81,56 @@ const Services = ({ themeMode = 'light' }) => {
         <Slider {...sliderOpts}>
           {[
             {
-              title: 'Web Design',
+              title: 'Web-Apps',
               subtitle:
-                'We design and develop amazing, lightning fast, and high-converting websites that make your business grow.',
+                'We are using cutting edge technologies to design and develop beautiful, responsive, and really really fast web apps. ',
+              icon: (
+                <svg
+                  width={48}
+                  height={48}
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeWidth={2}
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5"
+                  />
+                </svg>
+              ),
+              color: colors.orange,
+            },
+            {
+              title: 'Mobile Apps',
+              subtitle:
+                'We design intuitive mobile  apps focused on driving user engagement and increasing users retention.',
+              icon: (
+                <svg
+                  width={48}
+                  height={48}
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"
+                  />
+                </svg>
+              ),
+              color: colors.green,
+            },
+
+            {
+              title: 'Desktop Apps',
+              subtitle:
+                'We design and develop amazing and beautiful cross-platform Desktop Apps - using modern web technologies - that you and your users will love.',
               icon: (
                 <svg
                   width={48}
@@ -103,125 +151,27 @@ const Services = ({ themeMode = 'light' }) => {
               color: colors.purple,
             },
             {
-              title: 'UI / UX Design',
+              title: 'Cloud Apps',
               subtitle:
-                'We design intuitive web & mobile apps focused on driving user engagement and increasing users retention.',
+                'We help you to transform your idea into a live, intuitive and scalable digital cloud product that your users will use and love. No server required.',
               icon: (
                 <svg
-                  width={48}
-                  height={48}
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
+                  width={48}
+                  height={48}
                   stroke="currentColor"
                 >
                   <path
                     strokeLinecap="round"
                     strokeLinejoin="round"
                     strokeWidth={2}
-                    d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"
-                  />
-                </svg>
-              ),
-              color: colors.green,
-            },
-            {
-              title: 'Brand Design',
-              subtitle:
-                'We transform businesses into world-class brands by going through a well thought brand identity design process.',
-              icon: (
-                <svg
-                  width={48}
-                  height={48}
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"
-                  />
-                </svg>
-              ),
-              color: colors.amber,
-            },
-            {
-              title: 'Product Design',
-              subtitle:
-                'We help you transform your idea into a live, intuitive and scalable digital product that your users will use and love.',
-              icon: (
-                <svg
-                  width={48}
-                  height={48}
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"
+                    d="M2.25 15a4.5 4.5 0 004.5 4.5H18a3.75 3.75 0 001.332-7.257 3 3 0 00-3.758-3.848 5.25 5.25 0 00-10.233 2.33A4.502 4.502 0 002.25 15z"
                   />
                 </svg>
               ),
               color: colors.pink,
-            },
-            {
-              title: 'Funnel Optimization',
-              subtitle:
-                'We help you optimize your website or mobile app flow to increase conversion rates and retention to drive growth.',
-              icon: (
-                <svg
-                  width={48}
-                  height={48}
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M16 8v8m-4-5v5m-4-2v2m-2 4h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
-                  />
-                </svg>
-              ),
-              color: colors.blue,
-            },
-            {
-              title: 'Automation',
-              subtitle:
-                'We help your business gain leverage and efficiency through automation using simple, yet powerful NoCode tools.',
-              icon: (
-                <svg
-                  width={48}
-                  height={48}
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"
-                  />
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
-                  />
-                </svg>
-              ),
-              color: colors.teal,
             },
           ].map((item, i) => (
             <Box padding={{ xs: 1, md: 2, lg: 3 }} key={i}>
@@ -229,6 +179,7 @@ const Services = ({ themeMode = 'light' }) => {
                 component={Card}
                 boxShadow={{ xs: 1, sm: 3 }}
                 borderRadius={5}
+                minHeight={370}
               >
                 <Box
                   component={CardContent}

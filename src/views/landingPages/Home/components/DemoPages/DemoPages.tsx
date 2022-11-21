@@ -151,7 +151,7 @@ const DemoPages = () => {
                     <Typography color="text.secondary">
                       {sp.title} page
                     </Typography>
-                    <Box marginTop={1} align={'right'}>
+                    <Box>
                       <Typography color={'primary'} variant={'subtitle2'}>
                         View demo
                       </Typography>

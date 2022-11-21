@@ -11,19 +11,19 @@ import Link from '@mui/material/Link';
 
 const validationSchema = yup.object({
   firstName: yup
-    .string('Enter your first name')
+    .string()
     .trim()
     .min(2, 'Please enter a valid name')
     .max(50, 'Please enter a valid name')
     .required('Please specify your first name'),
   lastName: yup
-    .string('Enter your last name')
+    .string()
     .trim()
     .min(2, 'Please enter a valid name')
     .max(50, 'Please enter a valid name')
     .required('Please specify your last name'),
   email: yup
-    .string('Enter your email')
+    .string()
     .trim()
     .email('Please enter a valid email address')
     .required('Email is required.'),
@@ -92,7 +92,6 @@ const Form = () => {
               error={
                 formik.touched.firstName && Boolean(formik.errors.firstName)
               }
-              helperText={formik.touched.firstName && formik.errors.firstName}
             />
           </Grid>
           <Grid item xs={12} sm={6}>
@@ -107,7 +106,6 @@ const Form = () => {
               value={formik.values.lastName}
               onChange={formik.handleChange}
               error={formik.touched.lastName && Boolean(formik.errors.lastName)}
-              helperText={formik.touched.lastName && formik.errors.lastName}
             />
           </Grid>
           <Grid item xs={12}>
@@ -122,7 +120,6 @@ const Form = () => {
               value={formik.values.email}
               onChange={formik.handleChange}
               error={formik.touched.email && Boolean(formik.errors.email)}
-              helperText={formik.touched.email && formik.errors.email}
             />
           </Grid>
           <Grid item xs={12}>
@@ -138,7 +135,6 @@ const Form = () => {
               value={formik.values.password}
               onChange={formik.handleChange}
               error={formik.touched.password && Boolean(formik.errors.password)}
-              helperText={formik.touched.password && formik.errors.password}
             />
           </Grid>
           <Grid item container xs={12}>

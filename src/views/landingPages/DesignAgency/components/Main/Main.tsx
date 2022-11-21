@@ -1,20 +1,11 @@
-import React from 'react';
-import { useTheme } from '@mui/material/styles';
 import Box from '@mui/material/Box';
-import Typography from '@mui/material/Typography';
-import Grid from '@mui/material/Grid';
-import Card from '@mui/material/Card';
-import CardContent from '@mui/material/CardContent';
-import CardActions from '@mui/material/CardActions';
-import Button from '@mui/material/Button';
-import CardMedia from '@mui/material/CardMedia';
 
 const Main = () => {
-  const theme = useTheme();
+  // const theme = useTheme();
 
   return (
     <Box>
-      <Box marginBottom={4}>
+      {/* <Box marginBottom={4}>
         <Typography
           sx={{
             textTransform: 'uppercase',
@@ -55,30 +46,30 @@ const Main = () => {
             subtitle:
               'For healthy and beautiful skin, get skincare customized just for you from experts at Curology.',
           },
-          {
-            media: 'https://assets.maccarianagency.com/backgrounds/img7.jpg',
-            title: 'Hubble',
-            subtitle:
-              'The more affordable daily contact lens. Modify or cancel anytime.',
-          },
-          {
-            media: 'https://assets.maccarianagency.com/backgrounds/img8.jpg',
-            title: 'Larq',
-            subtitle:
-              'LARQ Bottle Benefit Edition. 0. Lives will be saved with access. to clean water.',
-          },
-          {
-            media: 'https://assets.maccarianagency.com/backgrounds/img6.jpg',
-            title: 'Curology',
-            subtitle:
-              'For healthy and beautiful skin, get skincare customized just for you from experts at Curology.',
-          },
-          {
-            media: 'https://assets.maccarianagency.com/backgrounds/img9.jpg',
-            title: 'Hubble',
-            subtitle:
-              'The more affordable daily contact lens. Modify or cancel anytime.',
-          },
+          // {
+          //   media: 'https://assets.maccarianagency.com/backgrounds/img7.jpg',
+          //   title: 'Hubble',
+          //   subtitle:
+          //     'The more affordable daily contact lens. Modify or cancel anytime.',
+          // },
+          // {
+          //   media: 'https://assets.maccarianagency.com/backgrounds/img8.jpg',
+          //   title: 'Larq',
+          //   subtitle:
+          //     'LARQ Bottle Benefit Edition. 0. Lives will be saved with access. to clean water.',
+          // },
+          // {
+          //   media: 'https://assets.maccarianagency.com/backgrounds/img6.jpg',
+          //   title: 'Curology',
+          //   subtitle:
+          //     'For healthy and beautiful skin, get skincare customized just for you from experts at Curology.',
+          // },
+          // {
+          //   media: 'https://assets.maccarianagency.com/backgrounds/img9.jpg',
+          //   title: 'Hubble',
+          //   subtitle:
+          //     'The more affordable daily contact lens. Modify or cancel anytime.',
+          // },
           {
             media: 'https://assets.maccarianagency.com/backgrounds/img5.jpg',
             title: 'Larq',
@@ -154,7 +145,7 @@ const Main = () => {
             </Box>
           </Grid>
         ))}
-      </Grid>
+      </Grid> */}
     </Box>
   );
 };

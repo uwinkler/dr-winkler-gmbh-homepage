@@ -33,7 +33,7 @@ const Hero = () => {
             fontWeight: 400,
           }}
         >
-          Get in touch with us by sending a meeage and we will get back to you
+          Get in touch with us by sending a e-mail and we will get back to you
           soon to schedule a discovery call.
         </Typography>
       </Box>
@@ -48,85 +48,47 @@ const Hero = () => {
       borderRadius={2}
       boxShadow={4}
     >
-      <form noValidate autoComplete="off">
-        <Box display="flex" flexDirection={'column'}>
-          <Box marginBottom={2}>
-            <TextField
-              sx={{ height: 54 }}
-              label="Full name"
-              variant="outlined"
-              color="primary"
-              fullWidth
-            />
-          </Box>
-          <Box marginBottom={2}>
-            <TextField
-              sx={{ height: 54 }}
-              label="Email"
-              type="email"
-              variant="outlined"
-              color="primary"
-              fullWidth
-            />
-          </Box>
-          <Box marginBottom={2}>
-            <TextField
-              label="Message"
-              type="text"
-              variant="outlined"
-              color="primary"
-              fullWidth
-              multiline
-              rows={6}
-            />
-          </Box>
-          <Box>
-            <Button
-              sx={{ height: 54 }}
-              variant="contained"
-              color="primary"
-              fullWidth
-            >
-              Contact
-            </Button>
-          </Box>
-          <Box marginY={4} marginX={{ xs: -3, sm: -6 }}>
-            <Divider />
-          </Box>
-          <Box>
-            <Typography component="p" variant="body2" align="left">
-              By sending a message you agree to our{' '}
-              <Box
-                component="a"
-                href=""
-                color={theme.palette.text.primary}
-                fontWeight={'700'}
-              >
-                Privacy Policy
-              </Box>
-              ,{' '}
-              <Box
-                component="a"
-                href=""
-                color={theme.palette.text.primary}
-                fontWeight={'700'}
-              >
-                Data Policy
-              </Box>{' '}
-              and{' '}
-              <Box
-                component="a"
-                href=""
-                color={theme.palette.text.primary}
-                fontWeight={'700'}
-              >
-                Cookie Policy
-              </Box>
-              .
-            </Typography>
-          </Box>
+      <Box display="flex" flexDirection={'column'}>
+        <Box marginBottom={2}></Box>
+        <Box marginBottom={2}></Box>
+        <Box marginBottom={2}></Box>
+        <Box></Box>
+        <Box marginY={4} marginX={{ xs: -3, sm: -6 }}>
+          <Divider />
         </Box>
-      </form>
+        <Box>
+          <Typography component="p" variant="body2" align="left">
+            By sending a message you agree to our{' '}
+            <Box
+              component="a"
+              href=""
+              color={theme.palette.text.primary}
+              fontWeight={'700'}
+            >
+              Privacy Policy
+            </Box>
+            ,{' '}
+            <Box
+              component="a"
+              href=""
+              color={theme.palette.text.primary}
+              fontWeight={'700'}
+            >
+              Data Policy
+            </Box>{' '}
+            and{' '}
+            <Box
+              component="a"
+              href=""
+              color={theme.palette.text.primary}
+              fontWeight={'700'}
+            >
+              Cookie Policy
+            </Box>
+            .
+          </Typography>
+        </Box>
+      </Box>
     </Box>
   );
 

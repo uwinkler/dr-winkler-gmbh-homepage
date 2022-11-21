@@ -1,15 +1,14 @@
 import { responsiveFontSizes } from '@mui/material';
 import { createTheme } from '@mui/material/styles';
-import shadows from './shadows';
 import palette from './palette';
 
 const getTheme = (mode, paletteType) =>
   responsiveFontSizes(
     createTheme({
-      palette: palette(mode, paletteType),
-      layout: {
-        contentWidth: 1236,
-      },
+      palette: palette(mode, paletteType) as any,
+      // layout: {
+      //   contentWidth: 1236,
+      // },
       // shadows: shadows(mode),
       typography: {
         // fontFamily:

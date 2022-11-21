@@ -8,7 +8,7 @@ import { colors } from '@mui/material';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import Logo from 'src/svg/logos/Logo';
-import paletteTypes from 'common/paletteTypes';
+import paletteTypes from 'src/common/paletteTypes';
 
 const Topbar = ({
   themeMode,
@@ -43,7 +43,7 @@ const Topbar = ({
           height={{ xs: 28, md: 32 }}
           width={45}
         >
-          <Logo height={'100%'} width={'100%'} />
+          <Logo />
         </Box>
       </Box>
       <Box display="flex" alignItems={'center'}>
