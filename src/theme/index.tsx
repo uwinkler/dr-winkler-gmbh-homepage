@@ -1,6 +1,7 @@
 import { responsiveFontSizes } from '@mui/material';
 import { createTheme } from '@mui/material/styles';
 import palette from './palette';
+import shadows from './shadows';
 
 const getTheme = (mode, paletteType) =>
   responsiveFontSizes(
@@ -9,7 +10,7 @@ const getTheme = (mode, paletteType) =>
       // layout: {
       //   contentWidth: 1236,
       // },
-      // shadows: shadows(mode),
+      shadows: shadows(mode) as any,
       typography: {
         // fontFamily:
         // '"SignikaNegative-Regular", "Signika Negative", "Inter", sans-serif',

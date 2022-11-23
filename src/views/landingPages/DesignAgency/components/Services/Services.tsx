@@ -69,7 +69,7 @@ const Services = ({ themeMode = 'light' }) => {
             variant={'h3'}
             gutterBottom
           >
-            High-impact design & development services
+            High-impact development services
           </Box>
           <Typography variant={'h6'} component={'p'} color={'textSecondary'}>
             Centered around modern web technologies, we provide a wide range of

@@ -33,7 +33,7 @@ const Hero = () => {
                 fontWeight: 700,
               }}
             >
-              Experience you can trust on
+              Experience you can trust
               <br />
               <Typography
                 color={'primary'}

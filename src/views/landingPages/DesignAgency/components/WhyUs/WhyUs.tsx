@@ -38,7 +38,7 @@ const WhyUs = () => {
           align={'center'}
           data-aos={'fade-up'}
         >
-          As experts in both design & development,
+          With our network of experts in both design & development,
           <br />
           we help you and your team go through the complete process.
           <br />
