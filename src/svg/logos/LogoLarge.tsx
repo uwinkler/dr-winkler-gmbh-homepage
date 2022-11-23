@@ -14,8 +14,8 @@ export function LogoLarge({ width = '45px', height = '70px' }) {
       version="1.1"
       style={
         {
-          'fill-rule': 'evenodd',
-          'clip-rule': 'evenodd',
+          fillRule: 'evenodd',
+          clipRule: 'evenodd',
           'stroke-linejoin': 'round',
           'stroke-miterlimit': 2,
         } as any

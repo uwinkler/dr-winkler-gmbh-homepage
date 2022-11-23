@@ -49,45 +49,41 @@ const Hero = () => {
       boxShadow={4}
     >
       <Box display="flex" flexDirection={'column'}>
-        <Box marginBottom={2}></Box>
-        <Box marginBottom={2}></Box>
-        <Box marginBottom={2}></Box>
+        <Box
+          textTransform={'uppercase'}
+          color={theme.palette.grey[600]}
+          fontSize={14}
+        >
+          Dresden
+        </Box>
+        <Box fontSize={20}>Troppauer Str. 19</Box>
+        <Box fontSize={20}>01279 Dresden</Box>
         <Box></Box>
         <Box marginY={4} marginX={{ xs: -3, sm: -6 }}>
           <Divider />
         </Box>
-        <Box>
-          <Typography component="p" variant="body2" align="left">
-            By sending a message you agree to our{' '}
-            <Box
-              component="a"
-              href=""
-              color={theme.palette.text.primary}
-              fontWeight={'700'}
-            >
-              Privacy Policy
-            </Box>
-            ,{' '}
-            <Box
-              component="a"
-              href=""
-              color={theme.palette.text.primary}
-              fontWeight={'700'}
-            >
-              Data Policy
-            </Box>{' '}
-            and{' '}
-            <Box
-              component="a"
-              href=""
-              color={theme.palette.text.primary}
-              fontWeight={'700'}
-            >
-              Cookie Policy
-            </Box>
-            .
-          </Typography>
+
+        <Box
+          textTransform={'uppercase'}
+          color={theme.palette.grey[600]}
+          fontSize={14}
+        >
+          Senftenberg
         </Box>
+        <Box fontSize={20}>Nordstr. 10</Box>
+        <Box fontSize={20}>01996 Senftenberg/Hosena</Box>
+        <Box marginY={4} marginX={{ xs: -3, sm: -6 }}>
+          <Divider />
+        </Box>
+
+        <Button
+          variant="contained"
+          sx={{ fontSize: 22 }}
+          component="a"
+          href="mailto:hello@dr.winkler.gmbh"
+        >
+          hello@dr.winkler.gmbh
+        </Button>
       </Box>
     </Box>
   );

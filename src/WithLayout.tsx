@@ -16,9 +16,9 @@ export const useDarkMode = () => {
     setTheme(mode);
   };
 
-  const setThemePalette = (type = 'green') => {
-    const palette = palettes.indexOf(type) === -1 ? 'green' : type;
-    window.localStorage.setItem('themePalette', palette);
+  const setThemePalette = (type = 'orange') => {
+    const palette = palettes.indexOf(type) === -1 ? 'orange' : type;
+    window.localStorage.setItem('themePalette', 'orange');
     setPalette(palette);
   };
 
@@ -30,7 +30,7 @@ export const useDarkMode = () => {
     const localTheme = window.localStorage.getItem('themeMode');
     localTheme ? setTheme(localTheme) : setMode('light');
     const localPalette = window.localStorage.getItem('themePalette');
-    localPalette ? setPalette(localPalette) : setThemePalette('green');
+    localPalette ? setPalette(localPalette) : setThemePalette('orange');
     setMountedComponent(true);
   }, []);
 
@@ -77,7 +77,6 @@ export default function WithLayout({
 
   return (
     <ThemeProvider theme={getTheme(themeMode, paletteType)}>
-      {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
       <CssBaseline />
       <Paper elevation={0}>
         <Layout
