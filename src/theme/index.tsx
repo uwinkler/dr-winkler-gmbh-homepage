@@ -30,6 +30,14 @@ const getTheme = (mode, paletteType) =>
           fontFamily:
             '"SignikaNegative-Regular", "Signika Negative", "Inter", sans-serif',
         },
+        h4: {
+          fontFamily:
+            '"SignikaNegative-Regular", "Signika Negative", "Inter", sans-serif',
+        },
+        h5: {
+          fontFamily:
+            '"SignikaNegative-Regular", "Signika Negative", "Inter", sans-serif',
+        },
       },
       zIndex: {
         appBar: 1200,

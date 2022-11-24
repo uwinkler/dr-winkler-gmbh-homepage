@@ -10,3 +10,4 @@ export { default as ComingSoon } from './ComingSoon';
 export { default as MaintenanceMode } from './MaintenanceMode';
 export { default as Cover } from './Cover';
 export { default as NotFound } from './NotFound';
+export { default as WIP } from './WIP';

@@ -43,9 +43,10 @@ const Main = ({ children, themeToggler, themeMode, paletteType }) => {
         {children}
         <Divider />
       </main>
-      <Container paddingY={4}>
+
+      <footer>
         <Footer />
-      </Container>
+      </footer>
     </div>
   );
 };
