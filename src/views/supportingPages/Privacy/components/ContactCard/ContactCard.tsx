@@ -4,8 +4,17 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Card from '@mui/material/Card';
 
+function useEmail(initialEmail: string) {
+  const [email, setEmail] = React.useState('....');
+  React.useEffect(() => {
+    setTimeout(() => setEmail(initialEmail), 100);
+  }, []);
+  return email;
+}
+
 const ContactCard = () => {
   const theme = useTheme();
+  const email = useEmail('datenschutz@dr.winkler.gmbh');
 
   return (
     <Box
@@ -27,7 +36,7 @@ const ContactCard = () => {
           }}
           gutterBottom
         >
-          How can you contact us about this notice?
+          Fragen an den Datenschutzbeauftragten
         </Typography>
         <Typography
           variant={'body2'}
@@ -36,17 +45,19 @@ const ContactCard = () => {
             marginBottom: 2,
           }}
         >
-          If you have any questions or concerns about the privacy policy please
-          contact us.
+          Wenn Sie Fragen zum Datenschutz haben, schreiben Sie uns bitte eine
+          E-Mail oder wenden Sie sich direkt an unseren Datenschutzbeauftragten:
         </Typography>
         <Typography variant={'subtitle2'}>
-          hi@maccarianagency.com
+          {email}
           <br />
-          via Gola 4
+          Datenschutzbeauftragter
           <br />
-          Milan, Milano 20143
+          Dr. Winkler GmbH
           <br />
-          Italy
+          Nordstr. 10
+          <br />
+          01996 Hosena/Senftenberg
         </Typography>
       </Box>
     </Box>
