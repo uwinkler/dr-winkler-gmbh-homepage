@@ -1,15 +1,17 @@
-import React from 'react';
-import { useTheme } from '@mui/material/styles';
-import Card from '@mui/material/Card';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
-import TextField from '@mui/material/TextField';
-import Typography from '@mui/material/Typography';
-import Divider from '@mui/material/Divider';
 import Grid from '@mui/material/Grid';
+import { useTheme } from '@mui/material/styles';
+import Typography from '@mui/material/Typography';
+import { useEmail } from 'src/common/useEmail';
+import Cycling from 'src/svg/illustrations/Cycling';
+import Designer from 'src/svg/illustrations/Designer';
+import { VideoCall } from 'src/svg/illustrations/VideoCall';
 
 const Hero = () => {
   const theme = useTheme();
+  // eslint-disable-next-line no-useless-concat
+  const email = useEmail('hello' + '@dr' + '.winkler.gmbh');
 
   const GridItemHeadlineBlock = () => (
     <Box>
@@ -18,86 +20,52 @@ const Hero = () => {
         align="left"
         gutterBottom
         sx={{
-          color: theme.palette.common.white,
           fontWeight: 900,
         }}
       >
         Get in touch!
       </Typography>
-      <Box marginBottom={4}>
-        <Typography
-          variant="h6"
-          component="p"
-          sx={{
-            color: theme.palette.common.white,
-            fontWeight: 400,
-          }}
-        >
-          Get in touch with us by sending a e-mail and we will get back to you
-          soon to schedule a discovery call.
+
+      <Box>
+        <Typography variant="h6" color={'textSecondary'}>
+          We'd love to talk about how we can help you.
         </Typography>
+      </Box>
+      <Box marginBottom={4} marginTop={15}>
+        <Designer width="500px" height="100%" />
+        {/* <Cycling width="500px" height="auto" /> */}
+        {/* <VideoCall width="700px" height="auto" /> */}
       </Box>
     </Box>
   );
 
   const GridItemFormBlock = () => (
-    <Box
-      padding={{ xs: 3, sm: 6 }}
-      width={'100%'}
-      component={Card}
-      borderRadius={2}
-      boxShadow={4}
+    <Button
+      variant="contained"
+      component="a"
+      sx={{ padding: 2 }}
+      href={`mailto:${email}`}
     >
-      <Box display="flex" flexDirection={'column'}>
-        <Box
-          textTransform={'uppercase'}
-          color={theme.palette.grey[600]}
-          fontSize={14}
-        >
-          Dresden
-        </Box>
-        <Box fontSize={20}>Troppauer Str. 19</Box>
-        <Box fontSize={20}>01279 Dresden</Box>
-        <Box></Box>
-        <Box marginY={4} marginX={{ xs: -3, sm: -6 }}>
-          <Divider />
-        </Box>
-
-        <Box
-          textTransform={'uppercase'}
-          color={theme.palette.grey[600]}
-          fontSize={14}
-        >
-          Senftenberg
-        </Box>
-        <Box fontSize={20}>Nordstr. 10</Box>
-        <Box fontSize={20}>01996 Senftenberg/Hosena</Box>
-        <Box marginY={4} marginX={{ xs: -3, sm: -6 }}>
-          <Divider />
-        </Box>
-
-        <Button
-          variant="contained"
-          sx={{ fontSize: 22 }}
-          component="a"
-          href="mailto:hello@dr.winkler.gmbh"
-        >
-          hello@dr.winkler.gmbh
-        </Button>
-      </Box>
-    </Box>
+      <Typography variant="h4">{email}</Typography>
+    </Button>
   );
 
   return (
     <Box>
       <Grid container spacing={4}>
-        <Grid item xs={12} md={6}>
+        <Grid item xs={12} md={7}>
           <Box width={1} height="100%" display="flex" alignItems="center">
             <GridItemHeadlineBlock />
           </Box>
         </Grid>
-        <Grid item xs={12} md={6}>
-          <Box width={1} height="100%" display="flex" alignItems="center">
+        <Grid item xs={12} md={5}>
+          <Box
+            width={1}
+            height="100%"
+            display="flex"
+            alignItems="center"
+            justifyContent={'center'}
+          >
             <GridItemFormBlock />
           </Box>
         </Grid>

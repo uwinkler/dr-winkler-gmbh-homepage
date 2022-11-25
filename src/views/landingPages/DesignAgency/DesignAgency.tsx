@@ -100,15 +100,8 @@ const DesignAgency = ({ themeMode = 'light' }) => {
           />
         </Box>
       </Box>
-      {/* <Container> */}
-      {/* <Main /> */}
-      {/* </Container> */}
-      {/* <Box bgcolor={theme.palette.alternate.main}> */}
-      {/* <Container> */}
-      {/* <Reviews /> */}
-      {/* </Container> */}
-      {/* </Box> */}
-      <Box bgcolor={theme.palette.primary.main}>
+
+      <Box>
         <Container>
           <Contact />
         </Container>

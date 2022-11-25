@@ -20,23 +20,23 @@ const getTheme = (mode, paletteType) =>
         },
         h1: {
           fontFamily:
-            '"SignikaNegative-Regular", "Signika Negative", "Inter", sans-serif',
+            '"Signika-Negative", "Signika Negative", "Inter", sans-serif',
         },
         h2: {
           fontFamily:
-            '"SignikaNegative-Regular", "Signika Negative", "Inter", sans-serif',
+            '"Signika-Negative", "Signika Negative", "Inter", sans-serif',
         },
         h3: {
           fontFamily:
-            '"SignikaNegative-Regular", "Signika Negative", "Inter", sans-serif',
+            '"Signika-Negative", "Signika Negative", "Inter", sans-serif',
         },
         h4: {
           fontFamily:
-            '"SignikaNegative-Regular", "Signika Negative", "Inter", sans-serif',
+            '"Signika-Negative", "Signika Negative", "Inter", sans-serif',
         },
         h5: {
           fontFamily:
-            '"SignikaNegative-Regular", "Signika Negative", "Inter", sans-serif',
+            '"Signika-Negative", "Signika Negative", "Inter", sans-serif',
         },
       },
       zIndex: {

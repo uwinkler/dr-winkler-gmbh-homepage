@@ -11,17 +11,10 @@ import Logo from 'src/svg/logos/Logo';
 import NextLink from 'next/link';
 import Link from '@mui/material/Link';
 import Badge from '@mui/material/Badge';
+import { useEmail } from '../../../../common/useEmail';
 
 function useCurrentYear() {
   return new Date().getFullYear();
-}
-
-function useEmail() {
-  const [email, setEmail] = React.useState('....');
-  React.useEffect(() => {
-    setTimeout(() => setEmail('hello@dr.winkler.gmbh'), 100);
-  }, []);
-  return email;
 }
 
 function useTelephone() {
