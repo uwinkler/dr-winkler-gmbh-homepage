@@ -1,17 +1,14 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { useTheme } from '@mui/material/styles';
-import Container from 'src/common/Container';
 import Box from '@mui/material/Box';
+import { useTheme } from '@mui/material/styles';
+import PropTypes from 'prop-types';
+import Container from 'src/common/Container';
 import {
   Contact,
   Hero,
-  Main,
   Partners,
+  Process,
   Services,
   WhyUs,
-  Process,
-  Reviews,
 } from './components';
 
 const DesignAgency = ({ themeMode = 'light' }) => {

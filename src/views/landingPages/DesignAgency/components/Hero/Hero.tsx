@@ -33,8 +33,7 @@ const Hero = () => {
                 fontWeight: 700,
               }}
             >
-              Experience you can trust
-              <br />
+              Extend your team with our experienced developers
               <Typography
                 color={'primary'}
                 component={'span'}
@@ -73,6 +72,9 @@ const Hero = () => {
                 cloud
               </Typography>{' '}
               applications.
+              <br />
+              An experienced and caring team is the basement for any success. We
+              serve as extended developers embedded in your development team.
             </Typography>
           </Box>
         </Box>
