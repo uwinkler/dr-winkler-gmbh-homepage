@@ -8,7 +8,7 @@ import Cycling from 'src/svg/illustrations/Cycling';
 import Designer from 'src/svg/illustrations/Designer';
 import { VideoCall } from 'src/svg/illustrations/VideoCall';
 
-const Hero = () => {
+const Contact = () => {
   const theme = useTheme();
   // eslint-disable-next-line no-useless-concat
   const email = useEmail('hello' + '@dr' + '.winkler.gmbh');
@@ -74,4 +74,4 @@ const Hero = () => {
   );
 };
 
-export default Hero;
+export default Contact;

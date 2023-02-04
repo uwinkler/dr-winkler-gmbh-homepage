@@ -1,6 +1,6 @@
+import { Container } from '@mui/material';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
-import Grid from '@mui/material/Grid';
 import { useTheme } from '@mui/material/styles';
 import Typography from '@mui/material/Typography';
 import useMediaQuery from '@mui/material/useMediaQuery';
@@ -9,232 +9,230 @@ import 'react-image-lightbox/style.css';
 import 'react-lazy-load-image-component/src/effects/blur.css';
 import 'slick-carousel/slick/slick-theme.css';
 import 'slick-carousel/slick/slick.css';
-import Container from 'src/common/Container';
+import { Block } from 'src/common/Block';
+import { useEmail } from 'src/common/useEmail';
 import Main from 'src/layouts/Main';
-import InnovationIllustration from 'src/svg/illustrations/Innovation';
+import { TeamWork } from 'src/svg/illustrations/TeamWork';
 import WithLayout from 'src/WithLayout';
+import { BlockWithImage } from '../src/common/BlockWithImage';
 
 export default function App() {
   return <WithLayout component={Jobs} layout={Main} />;
 }
 
-function Jobs() {
-  const theme = useTheme();
-
-  return (
-    <Box>
-      <Box bgcolor={theme.palette.alternate.main} position={'relative'}>
-        <Container position="relative" zIndex={2}>
-          <Headline />
-        </Container>
-        <Box
-          component={'svg'}
-          preserveAspectRatio="none"
-          xmlns="http://www.w3.org/2000/svg"
-          x="0px"
-          y="0px"
-          viewBox="0 0 1921 273"
-          sx={{
-            position: 'absolute',
-            width: '100%',
-            left: 0,
-            bottom: 0,
-            right: 0,
-            zIndex: 1,
-            height: '35%',
-          }}
-        >
-          <polygon
-            fill={theme.palette.background.paper}
-            points="0,273 1921,273 1921,0 "
-          />
-        </Box>
-      </Box>
-    </Box>
-  );
-}
-
-function Hero() {
+const Jobs = () => {
   const theme = useTheme();
   const isMd = useMediaQuery(theme.breakpoints.up('md'), {
     defaultMatches: true,
   });
+  const email = useEmail(['jobs', '@', 'dr-winkler-gmbh.de'].join(''));
 
   return (
-    <Grid container spacing={4}>
-      <Grid item container alignItems={'center'} xs={12} md={6}>
-        <Box data-aos={isMd ? 'fade-right' : 'fade-up'}>
-          <Typography
-            sx={{
-              textTransform: 'uppercase',
-              fontWeight: 'medium',
-            }}
-            gutterBottom
-            color={'secondary'}
-          >
-            Dr. Winkler GmbH
-          </Typography>
-          <Box marginBottom={2}>
+    <>
+      <Block background="alternate">
+        <BlockWithImage Image={<TeamWork width={'100%'} height={'100%'} />}>
+          <Box>
             <Typography
-              variant="h2"
-              color="textPrimary"
-              sx={{
-                fontWeight: 700,
-              }}
+              variant="h3"
+              component={'h3'}
+              align={isMd ? 'left' : 'center'}
+              sx={{ fontWeight: 700 }}
+              gutterBottom
             >
-              Extend your team with our experienced developers
-              <Typography
-                color={'primary'}
-                component={'span'}
-                variant={'inherit'}
-              ></Typography>
+              Work with us!
+            </Typography>
+            <Typography
+              variant="h6"
+              component="p"
+              color="textSecondary"
+              align={isMd ? 'left' : 'center'}
+              gutterBottom
+            >
+              If you are looking for an exciting and challenging career in the
+              IT industry, then working for our company could be a great
+              opportunity for you.
+            </Typography>
+
+            <Box
+              marginTop={4}
+              display={'flex'}
+              justifyContent={{ xs: 'center', md: 'flex-start' }}
+            >
+              <Button
+                component="a"
+                variant="contained"
+                color="primary"
+                size="large"
+                href={`mailto:${email}`}
+              >
+                {email}
+              </Button>
+            </Box>
+          </Box>
+        </BlockWithImage>
+      </Block>
+
+      <Box>
+        <Container>
+          <Box marginBottom={4}>
+            <Typography
+              sx={{
+                textTransform: 'uppercase',
+                fontWeight: 'medium',
+              }}
+              gutterBottom
+              color={'secondary'}
+            >
+              Job 1
+            </Typography>
+            <Box
+              component={Typography}
+              fontWeight={700}
+              variant={'h3'}
+              gutterBottom
+            >
+              Student Developer (remote)
+            </Box>
+            <Typography component={'p'} color={'textSecondary'}>
+              <p>
+                We are seeking a motivated and enthusiastic student developer to
+                join our team and work on modern web technologies, specifically
+                the "restate" framework for React. The ideal candidate should
+                have a passion for coding and a strong desire to learn and grow
+                as a developer.
+              </p>
+              <p>Responsibilities:</p>
+              <p>
+                <ul>
+                  <li>
+                    Work on the development and maintenance of the "restate"
+                    framework
+                  </li>
+                  <li>
+                    Write clear and concise documentation and demos to support
+                    the framework
+                  </li>
+                  <li>
+                    Collaborate with the team to create high-quality, innovative
+                    software solutions.
+                  </li>
+                </ul>
+              </p>
+              <p>Requirements:</p>
+              <ul>
+                <li>
+                  Currently enrolled in a relevant degree program such as
+                  Computer Science, Software Engineering, or a related field
+                </li>
+                <li>
+                  Familiarity with modern web technologies and development
+                  practices
+                </li>
+                <li> Ability to work independently and as part of a team.</li>
+              </ul>
+
+              <p>
+                Benefits:
+                <ul>
+                  <li>Hands-on experience working on a real-world project</li>
+                  <li>
+                    Opportunity to contribute to and make an impact on an
+                    open-source framework
+                  </li>
+                  <li>
+                    Collaboration and learning opportunities with experienced
+                    developers
+                  </li>
+                  <li>
+                    Potential for future career growth and opportunities within
+                    the company
+                  </li>
+                  <li>
+                    Flexibility to work from home or another remote location
+                  </li>
+                  <li>Attractive salary package</li>
+                </ul>
+              </p>
+              <p>Technologies you will use and learn:</p>
+              <ul>
+                <li>React, Typescript, CSS, HTML, ...</li>
+                <li>Material UI, ...</li>
+                <li>vitepress, npm, git, ...</li>
+                <li>GitHub, NextJS</li>
+              </ul>
+              <p>
+                This is a unique and exciting opportunity for a student to gain
+                real-world experience, visibility and boost their career by
+                working on an open-source framework. No need to submit a CV,
+                just give us a call if you are interested!
+              </p>
             </Typography>
           </Box>
-          <Box marginBottom={3}>
-            <Typography variant="h6" component="p" color="textSecondary">
-              We are a team of highly experienced IT professionals, specialising
-              in{' '}
-              <Typography
-                variant="h6"
-                color="primary"
-                component="span"
-                fontWeight={600}
-              >
-                web
-              </Typography>
-              ,{' '}
-              <Typography
-                variant="h6"
-                color="primary"
-                component="span"
-                fontWeight={600}
-              >
-                mobile
-              </Typography>{' '}
-              and{' '}
-              <Typography
-                variant="h6"
-                color="primary"
-                component="span"
-                fontWeight={600}
-              >
-                cloud
-              </Typography>{' '}
-              applications.
-              <br />
-              An experienced and caring team is the basement for any success. We
-              serve as extended developers embedded in your development team.
-            </Typography>
-          </Box>
-        </Box>
-      </Grid>
-      <Grid item xs={12} md={6}>
-        <Box
-          height={'100%'}
-          width={'100%'}
-          display={'flex'}
-          justifyContent={'center'}
-          alignItems={'center'}
-        >
-          <Box height={'100%'} width={'100%'} maxHeight={500}>
-            <InnovationIllustration height="100%" width="100%" />
-          </Box>
-        </Box>
-      </Grid>
-    </Grid>
-  );
-}
-
-const Headline = () => {
-  const theme = useTheme();
-
-  return (
-    <Box
-      sx={{
-        position: 'relative',
-        '&::after': {
-          position: 'absolute',
-          content: '""',
-          width: '30%',
-          zIndex: 1,
-          top: 0,
-          left: 0,
-          height: '100%',
-          backgroundSize: '18px 18px',
-          backgroundImage: `radial-gradient(${theme.palette.primary.dark} 20%, transparent 20%)`,
-          opacity: 0.2,
-        },
-      }}
-    >
-      <Box position="relative" zIndex={2}>
-        <Typography
-          sx={{
-            textTransform: 'uppercase',
-            fontWeight: 'medium',
-          }}
-          gutterBottom
-          color={'textSecondary'}
-          align={'center'}
-        >
-          Work with us!
-        </Typography>
-        <Box marginBottom={2}>
-          <Typography
-            variant="h2"
-            align={'center'}
-            sx={{
-              fontWeight: 700,
-            }}
-          >
-            And we are looking for you!
-          </Typography>
-        </Box>
-        <Box marginBottom={4}>
-          <Typography variant="h6" color={'textSecondary'}>
-            If you are looking for an exciting and challenging career in the IT
-            industry, then working for our company could be a great opportunity
-            for you.
-          </Typography>
-
-          <Typography variant="h6" color={'textSecondary'}>
-            Our company does IT development as an IT consultancy, which means
-            you will have the chance to work on a variety of projects and gain
-            experience in different industries and technologies.
-          </Typography>
-          <Typography variant="h6" color={'textSecondary'}>
-            Since we are using a ton of open source, we also want to give back
-            to the community. We develop open source software, which allows you
-            to grow as a developer.
-          </Typography>
-        </Box>
-        <Box display="flex" justifyContent={'center'}>
-          <Box
-            component={Button}
-            variant="contained"
-            color="primary"
-            size="large"
-            endIcon={
-              <svg
-                width={16}
-                height={16}
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M17 8l4 4m0 0l-4 4m4-4H3"
-                />
-              </svg>
-            }
-          >
-            Contact us
-          </Box>
-        </Box>
+        </Container>
       </Box>
-    </Box>
+
+      <Block background="alternate">
+        <Container>
+          <Box marginBottom={4}>
+            <Typography
+              sx={{
+                textTransform: 'uppercase',
+                fontWeight: 'medium',
+              }}
+              gutterBottom
+              color={'secondary'}
+            >
+              Job 2
+            </Typography>
+            <Box
+              component={Typography}
+              fontWeight={700}
+              variant={'h3'}
+              gutterBottom
+            >
+              Senior Java Fullstack Developer (remote)
+            </Box>
+            <Typography component={'p'} color={'textSecondary'}>
+              <p>
+                We are seeking a highly experienced and Java Developer to join
+                our team. The successful candidate will be responsible for
+                leading software development projects using Java and Spring
+                Boot,
+              </p>
+              Responsibilities:
+              <ul>
+                <li>Work as an Java team lead for our customers</li>
+                <li>
+                  Designing and developing software systems using Java and
+                  Spring as well as documenting and maintaining the IT
+                  architecture of the system.
+                </li>
+              </ul>
+              Requirements:
+              <ul>
+                <li>Experience with medium and large development projects</li>
+                <li>Several years of Java development experience</li>
+                <li>
+                  Extensive project experience with GIT, Jenkins, Gradle
+                  scripts, Maven scripts and other JAVA related tools
+                </li>
+              </ul>
+              <p>
+                We offer a dynamic work environment, opportunities for growth
+                and development, and a competitive salary package. Like many
+                companies post-COVID, we're building our Headquarters online.
+                All our processes are remote- and online-first. We do have a
+                physical office, in beautiful Dresden if you want to come in.
+              </p>
+              <p>
+                If you meet the requirements and are passionate about software
+                development, we encourage you to apply for this exciting
+                opportunity.
+              </p>
+            </Typography>
+          </Box>
+        </Container>
+      </Block>
+    </>
   );
 };

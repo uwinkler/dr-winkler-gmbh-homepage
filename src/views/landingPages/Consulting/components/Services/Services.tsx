@@ -5,7 +5,7 @@ import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Grid';
 import Avatar from '@mui/material/Avatar';
 
-const Services = () => {
+const wServices = () => {
   const theme = useTheme();
   return (
     <Box>

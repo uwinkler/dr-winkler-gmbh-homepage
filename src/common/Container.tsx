@@ -15,8 +15,4 @@ const Container = ({ children, ...rest }) => (
   </Box>
 );
 
-Container.propTypes = {
-  children: PropTypes.node.isRequired,
-};
-
 export default Container;
