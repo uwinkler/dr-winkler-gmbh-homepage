@@ -1,10 +1,4 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { useTheme } from '@mui/material/styles';
-
 export const TeamWork = ({ width = '406', height = '306' }) => {
-  const theme = useTheme();
-  const colorPrimaryMain = theme.palette.primary.main;
   return (
     <svg viewBox="0 0 400 300" width={width} height={height}>
       <title>_</title>

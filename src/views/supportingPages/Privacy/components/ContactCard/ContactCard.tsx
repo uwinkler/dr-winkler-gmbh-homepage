@@ -1,14 +1,14 @@
-import React from 'react';
-import { useTheme } from '@mui/material/styles';
 import Box from '@mui/material/Box';
-import Typography from '@mui/material/Typography';
 import Card from '@mui/material/Card';
+import { useTheme } from '@mui/material/styles';
+import Typography from '@mui/material/Typography';
+import React from 'react';
 
 function useEmail(initialEmail: string) {
   const [email, setEmail] = React.useState('....');
   React.useEffect(() => {
     setTimeout(() => setEmail(initialEmail), 100);
-  }, []);
+  }, [initialEmail]);
   return email;
 }
 

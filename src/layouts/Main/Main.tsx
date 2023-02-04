@@ -4,10 +4,8 @@ import Divider from '@mui/material/Divider';
 import Slide from '@mui/material/Slide';
 import { useTheme } from '@mui/material/styles';
 import useScrollTrigger from '@mui/material/useScrollTrigger';
-import { useState } from 'react';
 import Container from 'src/common/Container';
-import { pages } from '../navigation';
-import { Footer, Sidebar, Topbar } from './components';
+import { Footer, Topbar } from './components';
 
 const HideOnScroll = ({ children }) => {
   const trigger = useScrollTrigger();

@@ -3,7 +3,7 @@ import { useTheme } from '@mui/material/styles';
 export function VideoCall({ width = '406', height = '306' }) {
   const theme = useTheme();
   const colorPrimaryMain = theme.palette.primary.main;
-  const colorPrimaryMainLight = theme.palette.primary.light;
+  // const colorPrimaryMainLight = theme.palette.primary.light;
 
   return (
     <svg

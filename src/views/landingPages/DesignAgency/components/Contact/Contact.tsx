@@ -4,9 +4,7 @@ import Grid from '@mui/material/Grid';
 import { useTheme } from '@mui/material/styles';
 import Typography from '@mui/material/Typography';
 import { useEmail } from 'src/common/useEmail';
-import Cycling from 'src/svg/illustrations/Cycling';
 import Designer from 'src/svg/illustrations/Designer';
-import { VideoCall } from 'src/svg/illustrations/VideoCall';
 
 const Contact = () => {
   const theme = useTheme();

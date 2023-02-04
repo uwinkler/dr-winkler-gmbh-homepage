@@ -6,15 +6,8 @@ export function Heading<C>(props: WithChildren<C>) {
   const { children, sx } = props;
 
   return (
-    <Box
-      component={Typography}
-      fontWeight={700}
-      variant={'h3'}
-      gutterBottom
-      align={'center'}
-      {...sx}
-    >
-      {children}
+    <Box sx={{ align: 'center', ...sx }}>
+      <Typography variant="h3">{children}</Typography>
     </Box>
   );
 }
