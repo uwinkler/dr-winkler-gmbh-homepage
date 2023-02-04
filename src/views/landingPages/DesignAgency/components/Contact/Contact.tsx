@@ -1,13 +1,11 @@
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Grid from '@mui/material/Grid';
-import { useTheme } from '@mui/material/styles';
 import Typography from '@mui/material/Typography';
 import { useEmail } from 'src/common/useEmail';
 import Designer from 'src/svg/illustrations/Designer';
 
 const Contact = () => {
-  const theme = useTheme();
   // eslint-disable-next-line no-useless-concat
   const email = useEmail('hello' + '@dr' + '.winkler.gmbh');
 

@@ -6,8 +6,12 @@ import React, { useEffect, useState } from 'react';
 import palettes from 'src/common/paletteTypes';
 import getTheme from 'src/theme';
 
-export const useDarkMode = () => {
-  const [themeMode, setTheme] = useState('light');
+export const useAppTheme = () => {
+  let initialThemeMode = 'light';
+  if (typeof window !== 'undefined') {
+    initialThemeMode = window.localStorage.getItem('themeMode') || 'light';
+  }
+  const [themeMode, setTheme] = useState(initialThemeMode);
   const [paletteType, setPalette] = useState(palettes[0]);
   const [mountedComponent, setMountedComponent] = useState(false);
 
@@ -69,7 +73,7 @@ export default function WithLayout({
     paletteType,
     setThemePalette,
     mountedComponent,
-  ] = useDarkMode();
+  ] = useAppTheme();
 
   useEffect(() => {
     AOS.refresh();
