@@ -5,20 +5,17 @@ import 'slick-carousel/slick/slick-theme.css';
 import 'slick-carousel/slick/slick.css';
 import Main from 'src/layouts/Main';
 import WithLayout from 'src/WithLayout';
+import { getCookie } from 'cookies-next';
 
 import { NotFound } from 'src/views/supportingPages';
-import { getThemeFromCookies } from 'src/common/getThemeFromCookies';
 
-export const getServerSideProps = async ({ req }) => {
-  return getThemeFromCookies(req);
-};
-
-const App = (props) => {
+const App = () => {
+  const initialThemeMode = getCookie('initialThemeMode') || 'light';
   return (
     <WithLayout
       component={NotFound}
       layout={Main}
-      initialThemeMode={props.initialThemeMode}
+      initialThemeMode={initialThemeMode}
     />
   );
 };
