@@ -3,8 +3,6 @@ import PropTypes from 'prop-types';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 
-
-
 const PrivacySection = ({ title, description }) => {
   return (
     <Box>
@@ -63,7 +61,12 @@ const Content = () => {
         `,
     },
     {
-      title: `5. Ihre Rechte auf Auskunft, Berichtigung, Sperre, Löschung und Widerspruch`,
+      title: '5. Vercel Hosting und Analytics',
+      description: `Um unsere Seite zu entwickeln und zu hosten, nutzen wir NextJS sowie Vercel, eine Cloud-Deployment-Plattform: Vercel Inc., 340 S Lemon Ave #4133, Walnut, CA 91789, USA. 
+      Die Datenverarbeitungsbedingung von Vercel (Data Processing Addendum) finden Sie unter: https://vercel.com/legal/Vercel_Inc_-_Data_Processing_Addendum.pdf.`,
+    },
+    {
+      title: `6. Ihre Rechte auf Auskunft, Berichtigung, Sperre, Löschung und Widerspruch`,
       description: `
         Sie haben das Recht, jederzeit Auskunft über Ihre bei uns gespeicherten personenbezogenen Daten zu erhalten. Ebenso haben Sie das Recht auf Berichtigung, Sperrung oder, abgesehen von der vorgeschriebenen Datenspeicherung zur Geschäftsabwicklung, Löschung Ihrer personenbezogenen Daten. Bitte wenden Sie sich dazu an unseren Datenschutzbeauftragten. Die Kontaktdaten finden Sie ganz unten.
 
@@ -73,7 +76,7 @@ Sie können Änderungen oder den Widerruf einer Einwilligung durch entsprechende
         `,
     },
     {
-      title: `6. Änderung unserer Datenschutzbestimmungen`,
+      title: `7. Änderung unserer Datenschutzbestimmungen`,
       description: `
         Wir behalten uns vor, diese Datenschutzerklärung gelegentlich anzupassen, damit sie stets den aktuellen rechtlichen Anforderungen entspricht oder um Änderungen unserer Leistungen in der Datenschutzerklärung umzusetzen, z. B. bei der Einführung neuer Services. Für Ihren erneuten Besuch gilt dann die neue Datenschutzerklärung.
 `,
