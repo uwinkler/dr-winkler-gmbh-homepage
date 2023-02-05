@@ -2,27 +2,19 @@ import AlternateEmailIcon from '@mui/icons-material/AlternateEmail';
 import ApartmentIcon from '@mui/icons-material/Apartment';
 import CallIcon from '@mui/icons-material/Call';
 import LocalShippingIcon from '@mui/icons-material/LocalShipping';
+import Badge from '@mui/material/Badge';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
-import { styled, useTheme } from '@mui/material/styles';
-import React from 'react';
-import Container from 'src/common/Container';
-import Logo from 'src/svg/logos/Logo';
-import NextLink from 'next/link';
 import Link from '@mui/material/Link';
-import Badge from '@mui/material/Badge';
+import { styled, useTheme } from '@mui/material/styles';
+import NextLink from 'next/link';
+import Container from 'src/common/Container';
+import { useTelephone } from 'src/common/useTelephone';
+import Logo from 'src/svg/logos/Logo';
 import { useEmail } from '../../../../common/useEmail';
 
 function useCurrentYear() {
   return new Date().getFullYear();
-}
-
-function useTelephone() {
-  const [telephone, setTelephone] = React.useState('....');
-  React.useEffect(() => {
-    setTimeout(() => setTelephone('+49 351-41 89 09 68'), 100);
-  }, []);
-  return telephone;
 }
 
 const Footer = () => {

@@ -7,7 +7,7 @@ import Designer from 'src/svg/illustrations/Designer';
 
 const Contact = () => {
   // eslint-disable-next-line no-useless-concat
-  const email = useEmail('hello' + '@dr' + '.winkler.gmbh');
+  const email = useEmail('hello' + '@dr' + '-winkler-gmbh.de');
 
   const GridItemHeadlineBlock = () => (
     <Box>

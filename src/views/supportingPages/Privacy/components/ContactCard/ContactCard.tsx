@@ -14,7 +14,7 @@ function useEmail(initialEmail: string) {
 
 const ContactCard = () => {
   const theme = useTheme();
-  const email = useEmail('datenschutz@dr.winkler.gmbh');
+  const email = useEmail('privacy@dr-winkler-gmbh.de');
 
   return (
     <Box

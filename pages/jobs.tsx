@@ -43,44 +43,36 @@ const Jobs = () => {
     <>
       <Block background="alternate">
         <BlockWithImage Image={<TeamWork width={'100%'} height={'100%'} />}>
-          <Box>
-            <Typography
-              variant="h3"
-              component={'h3'}
-              align={isMd ? 'left' : 'center'}
-              sx={{ fontWeight: 700 }}
-              gutterBottom
-            >
-              Work with us!
-            </Typography>
-            <Typography
-              variant="h6"
-              component="p"
-              color="textSecondary"
-              align={isMd ? 'left' : 'center'}
-              gutterBottom
-            >
-              If you are looking for an exciting and challenging career in the
-              IT industry, then working for our company could be a great
-              opportunity for you.
-            </Typography>
+          <Typography
+            variant="h3"
+            component={'h3'}
+            align={isMd ? 'left' : 'center'}
+            sx={{ fontWeight: 700 }}
+            gutterBottom
+          >
+            Work with us!
+          </Typography>
+          <Typography
+            variant="h6"
+            component="p"
+            color="textSecondary"
+            align={isMd ? 'left' : 'center'}
+            gutterBottom
+          >
+            If you are looking for an exciting and challenging career in the IT
+            industry, then working for our company could be a great opportunity
+            for you.
+          </Typography>
 
-            <Box
-              marginTop={4}
-              display={'flex'}
-              justifyContent={{ xs: 'center', md: 'flex-start' }}
-            >
-              <Button
-                component="a"
-                variant="contained"
-                color="primary"
-                size="large"
-                href={`mailto:${email}`}
-              >
-                {email}
-              </Button>
-            </Box>
-          </Box>
+          <Button
+            component="a"
+            variant="contained"
+            color="primary"
+            sx={{ padding: 2, marginTop: 5 }}
+            href={`mailto:${email}`}
+          >
+            <Typography variant="h5">{email}</Typography>
+          </Button>
         </BlockWithImage>
       </Block>
 
