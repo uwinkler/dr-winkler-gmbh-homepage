@@ -10,14 +10,25 @@ import 'react-lazy-load-image-component/src/effects/blur.css';
 import 'slick-carousel/slick/slick-theme.css';
 import 'slick-carousel/slick/slick.css';
 import { Block } from 'src/common/Block';
+import { getThemeFromCookies } from 'src/common/getThemeFromCookies';
 import { useEmail } from 'src/common/useEmail';
 import Main from 'src/layouts/Main';
 import { TeamWork } from 'src/svg/illustrations/TeamWork';
 import WithLayout from 'src/WithLayout';
 import { BlockWithImage } from '../src/common/BlockWithImage';
 
-export default function App() {
-  return <WithLayout component={Jobs} layout={Main} />;
+export const getServerSideProps = async ({ req }) => {
+  return getThemeFromCookies(req);
+};
+
+export default function App(props) {
+  return (
+    <WithLayout
+      component={Jobs}
+      layout={Main}
+      initialThemeMode={props.initialThemeMode}
+    />
+  );
 }
 
 const Jobs = () => {
@@ -25,6 +36,7 @@ const Jobs = () => {
   const isMd = useMediaQuery(theme.breakpoints.up('md'), {
     defaultMatches: true,
   });
+
   const email = useEmail(['jobs', '@', 'dr-winkler-gmbh.de'].join(''));
 
   return (
@@ -85,15 +97,10 @@ const Jobs = () => {
             >
               Job 1
             </Typography>
-            <Box
-              component={Typography}
-              fontWeight={700}
-              variant={'h3'}
-              gutterBottom
-            >
+            <Typography variant={'h3'} gutterBottom>
               Student Developer (remote)
-            </Box>
-            <Typography component={'p'} color={'textSecondary'}>
+            </Typography>
+            <Typography component={'div'} color={'textSecondary'}>
               <p>
                 We are seeking a motivated and enthusiastic student developer to
                 join our team and work on modern web technologies, specifically
@@ -102,22 +109,22 @@ const Jobs = () => {
                 as a developer.
               </p>
               <p>Responsibilities:</p>
-              <p>
-                <ul>
-                  <li>
-                    Work on the development and maintenance of the "restate"
-                    framework
-                  </li>
-                  <li>
-                    Write clear and concise documentation and demos to support
-                    the framework
-                  </li>
-                  <li>
-                    Collaborate with the team to create high-quality, innovative
-                    software solutions.
-                  </li>
-                </ul>
-              </p>
+
+              <ul>
+                <li>
+                  Work on the development and maintenance of the "restate"
+                  framework
+                </li>
+                <li>
+                  Write clear and concise documentation and demos to support the
+                  framework
+                </li>
+                <li>
+                  Collaborate with the team to create high-quality, innovative
+                  software solutions.
+                </li>
+              </ul>
+
               <p>Requirements:</p>
               <ul>
                 <li>
@@ -131,28 +138,27 @@ const Jobs = () => {
                 <li> Ability to work independently and as part of a team.</li>
               </ul>
 
-              <p>
-                Benefits:
-                <ul>
-                  <li>Hands-on experience working on a real-world project</li>
-                  <li>
-                    Opportunity to contribute to and make an impact on an
-                    open-source framework
-                  </li>
-                  <li>
-                    Collaboration and learning opportunities with experienced
-                    developers
-                  </li>
-                  <li>
-                    Potential for future career growth and opportunities within
-                    the company
-                  </li>
-                  <li>
-                    Flexibility to work from home or another remote location
-                  </li>
-                  <li>Attractive salary package</li>
-                </ul>
-              </p>
+              <p>Benefits:</p>
+              <ul>
+                <li>Hands-on experience working on a real-world project</li>
+                <li>
+                  Opportunity to contribute to and make an impact on an
+                  open-source framework
+                </li>
+                <li>
+                  Collaboration and learning opportunities with experienced
+                  developers
+                </li>
+                <li>
+                  Potential for future career growth and opportunities within
+                  the company
+                </li>
+                <li>
+                  Flexibility to work from home or another remote location
+                </li>
+                <li>Attractive salary package</li>
+              </ul>
+
               <p>Technologies you will use and learn:</p>
               <ul>
                 <li>React, Typescript, CSS, HTML, ...</li>
@@ -192,7 +198,7 @@ const Jobs = () => {
             >
               Senior Java Fullstack Developer (remote)
             </Box>
-            <Typography component={'p'} color={'textSecondary'}>
+            <Typography component={'div'} color={'textSecondary'}>
               <p>
                 We are seeking a highly experienced and Java Developer to join
                 our team. The successful candidate will be responsible for

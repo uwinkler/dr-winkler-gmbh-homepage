@@ -5,18 +5,14 @@ import AOS from 'aos';
 import React, { useEffect, useState } from 'react';
 import palettes from 'src/common/paletteTypes';
 import getTheme from 'src/theme';
+import { setCookie } from 'cookies-next';
 
-export const useAppTheme = () => {
-  let initialThemeMode = 'light';
-  if (typeof window !== 'undefined') {
-    initialThemeMode = window.localStorage.getItem('themeMode') || 'light';
-  }
+export const useAppTheme = (initialThemeMode = 'light') => {
   const [themeMode, setTheme] = useState(initialThemeMode);
   const [paletteType, setPalette] = useState(palettes[0]);
-  const [mountedComponent, setMountedComponent] = useState(false);
 
   const setMode = (mode) => {
-    window.localStorage.setItem('themeMode', mode);
+    setCookie('initialThemeMode', mode, { path: '/' });
     setTheme(mode);
   };
 
@@ -30,26 +26,13 @@ export const useAppTheme = () => {
     themeMode === 'light' ? setMode('dark') : setMode('light');
   };
 
-  useEffect(() => {
-    const localTheme = window.localStorage.getItem('themeMode');
-    localTheme ? setTheme(localTheme) : setMode('light');
-    const localPalette = window.localStorage.getItem('themePalette');
-    localPalette ? setPalette(localPalette) : setThemePalette('orange');
-    setMountedComponent(true);
-  }, []);
-
-  return [
-    themeMode,
-    themeToggler,
-    paletteType,
-    setThemePalette,
-    mountedComponent,
-  ];
+  return [themeMode, themeToggler, paletteType, setThemePalette];
 };
 
 export default function WithLayout({
   component: Component,
   layout: Layout,
+  initialThemeMode,
   ...rest
 }) {
   React.useEffect(() => {
@@ -73,7 +56,7 @@ export default function WithLayout({
     paletteType,
     setThemePalette,
     mountedComponent,
-  ] = useAppTheme();
+  ] = useAppTheme(initialThemeMode);
 
   useEffect(() => {
     AOS.refresh();

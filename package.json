@@ -37,6 +37,7 @@
     "@types/react": "^18.0.25",
     "aos": "^2.3.4",
     "clsx": "^1.0.4",
+    "cookies-next": "^2.1.1",
     "date-fns": "^2.19.0",
     "formik": "^2.2.6",
     "history": "^5.0.0",

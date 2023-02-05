@@ -1,4 +1,6 @@
 import Box from '@mui/material/Box';
+import Grid from '@mui/material/Grid';
+import { useTheme } from '@mui/material/styles';
 import Typography from '@mui/material/Typography';
 import 'aos/dist/aos.css';
 import 'react-image-lightbox/style.css';
@@ -6,15 +8,24 @@ import 'react-lazy-load-image-component/src/effects/blur.css';
 import 'slick-carousel/slick/slick-theme.css';
 import 'slick-carousel/slick/slick.css';
 import Container from 'src/common/Container';
+import { getThemeFromCookies } from 'src/common/getThemeFromCookies';
 import Main from 'src/layouts/Main';
-import WithLayout from 'src/WithLayout';
-import Grid from '@mui/material/Grid';
-import { useTheme } from '@mui/material/styles';
 import ContactCard from 'src/views/supportingPages/Privacy/components/ContactCard';
 import Content from 'src/views/supportingPages/Privacy/components/Content';
+import WithLayout from 'src/WithLayout';
 
-const App = () => {
-  return <WithLayout component={Privacy} layout={Main} />;
+export const getServerSideProps = async ({ req }) => {
+  return getThemeFromCookies(req);
+};
+
+const App = (props) => {
+  return (
+    <WithLayout
+      component={Privacy}
+      layout={Main}
+      initialThemeMode={props.initialThemeMode}
+    />
+  );
 };
 
 function Privacy() {

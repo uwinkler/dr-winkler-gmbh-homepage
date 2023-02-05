@@ -7,9 +7,20 @@ import Main from 'src/layouts/Main';
 import WithLayout from 'src/WithLayout';
 
 import { WIP } from 'src/views/supportingPages';
+import { getThemeFromCookies } from 'src/common/getThemeFromCookies';
 
-const App = () => {
-  return <WithLayout component={WIP} layout={Main} />;
+export const getServerSideProps = async ({ req }) => {
+  return getThemeFromCookies(req);
+};
+
+const App = (props) => {
+  return (
+    <WithLayout
+      component={WIP}
+      layout={Main}
+      initialThemeMode={props.initialThemeMode}
+    />
+  );
 };
 
 export default App;

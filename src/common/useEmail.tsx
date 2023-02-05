@@ -8,7 +8,7 @@ export function useEmail(initialEmail = 'hello' + '@' + 'dr-winkler-gmbh.de') {
 
   const [email, setEmail] = React.useState(dots);
   React.useEffect(() => {
-    setTimeout(() => setEmail(initialEmail), 100);
+    setTimeout(() => setEmail(initialEmail), 1);
   }, [initialEmail]);
 
   return email;
