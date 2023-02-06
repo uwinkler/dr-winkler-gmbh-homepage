@@ -34,10 +34,10 @@ const WIP = () => {
                 gutterBottom
                 sx={{ fontWeight: 700 }}
               >
-                Work in progress
+                Update in progress
               </Typography>
               <Typography component="p" color="textSecondary" align={'center'}>
-                This page is under construction.
+                This page is under construction and will be back soon.
                 <br />
                 Stay tuned!
               </Typography>

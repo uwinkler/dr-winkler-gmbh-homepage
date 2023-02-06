@@ -40,6 +40,16 @@ const Topbar = ({ themeMode, themeToggler }: TopbarProps) => {
         >
           Consulting
         </Link>
+        <Box>
+          <Link
+            href="/projects"
+            underline="none"
+            color="textPrimary"
+            component={NextLink}
+          >
+            Projects
+          </Link>
+        </Box>
 
         <Link
           color="textPrimary"
@@ -63,15 +73,6 @@ const Topbar = ({ themeMode, themeToggler }: TopbarProps) => {
             </Link>
           </Badge>
         </Box>
-
-        <Link
-          href="/projects"
-          underline="none"
-          color="textPrimary"
-          component={NextLink}
-        >
-          Projects
-        </Link>
 
         <DarkLightToggleButton
           themeToggler={themeToggler}

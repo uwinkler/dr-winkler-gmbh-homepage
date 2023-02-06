@@ -90,7 +90,7 @@ const Jobs = () => {
               Job 1
             </Typography>
             <Typography variant={'h3'} gutterBottom>
-              Student Developer (remote)
+              Student Developer (remote) <GenderStar />
             </Typography>
             <Typography component={'div'} color={'textSecondary'}>
               <p>
@@ -182,13 +182,8 @@ const Jobs = () => {
             >
               Job 2
             </Typography>
-            <Box
-              component={Typography}
-              fontWeight={700}
-              variant={'h3'}
-              gutterBottom
-            >
-              Senior Java Fullstack Developer (remote)
+            <Box component={Typography} variant={'h3'} gutterBottom>
+              Senior Java Fullstack Developer (remote) <GenderStar />
             </Box>
             <Typography component={'div'} color={'textSecondary'}>
               <p>
@@ -234,3 +229,19 @@ const Jobs = () => {
     </>
   );
 };
+
+function GenderStar() {
+  const theme = useTheme();
+  return (
+    <Box
+      color={theme.palette.grey[500]}
+      sx={{
+        fontWeight: '300',
+        fontSize: '1.4rem',
+      }}
+      component={'span'}
+    >
+      /mwd/
+    </Box>
+  );
+}
