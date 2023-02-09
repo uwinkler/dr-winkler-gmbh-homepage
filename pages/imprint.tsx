@@ -84,7 +84,7 @@ const Imprint = () => {
             <br />
             Umsatzsteuer-Identifikationsnummer nach §27a Umsatzsteuergesetz:
             <br />
-            DE815311875
+            DE287189325
           </p>
           <p>
             <strong>Verantwortlich für den Inhalt</strong> (gem. § 55 Abs. 2
