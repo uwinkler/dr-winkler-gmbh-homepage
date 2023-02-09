@@ -113,7 +113,7 @@ const Footer = () => {
                     <GroupHeadline>Geschäftsführer</GroupHeadline>
                     <Box>Dr. Ulrich Winkler</Box>
                     <GroupHeadline>USt.-ID Nummer:</GroupHeadline>
-                    <Box> DE815311875</Box>
+                    <Box>DE287189325</Box>
                     <GroupHeadline>Amtsgericht</GroupHeadline>
                     <Box>Cottbus HRB 16633</Box>
                     <GroupHeadline>
