@@ -94,8 +94,8 @@ const Footer = () => {
                   <LocalShippingIcon sx={{ fontSize: '15px' }} />
                 </Box>
                 <Box>
-                  <Box>Troppauer Str 19</Box>
-                  <Box>01279 Dresden</Box>
+                  <Box>Julie-Salinger-Weg 2</Box>
+                  <Box>01099 Dresden</Box>
                 </Box>
               </Box>
             </Grid>
@@ -166,7 +166,7 @@ const Footer = () => {
                       <li>
                         <Link
                           component={NextLink}
-                          href="/restate"
+                          href="https://restate.netlify.app"
                           color="text.primary"
                           sx={{ textDecoration: 'none' }}
                         >
@@ -176,7 +176,7 @@ const Footer = () => {
                       <li>
                         <Link
                           component={NextLink}
-                          href="/restate"
+                          href="/jobs"
                           color="text.primary"
                           sx={{ textDecoration: 'none' }}
                         >
